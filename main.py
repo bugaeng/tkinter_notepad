@@ -18,6 +18,12 @@ menu.add_cascade(label="File",menu=menu_1)
 menu_2=Menu(menu,tearoff=0)
 menu_2.add_command(label="Made By Bugaeng")
 menu.add_cascade(label="Maker",menu=menu_2)
-window.config(menu=menu)
 
+#텍스트 입력창(메모장의 주요기능) 추가
+text_area=Text(window)
+window.grid_rowconfigure(0,weight=1)
+window.grid_columnconfigure(0,weight=1)
+text_area.grid(sticky=N+E+S+W)
+
+window.config(menu=menu)
 window.mainloop()
